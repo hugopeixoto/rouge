@@ -353,8 +353,7 @@ module Rouge
       when Lexer
         val
       when String
-        lexer_class = Lexer.find(val)
-        lexer_class && lexer_class.new(@options)
+        Lexer.find_fancy(val, nil, @options)
       end
     end
 
